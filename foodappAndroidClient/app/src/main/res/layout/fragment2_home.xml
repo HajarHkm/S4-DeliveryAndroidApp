@@ -1,0 +1,60 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context="com.example.hajar.foodapp.fragment2Home">
+
+
+
+
+        <TextView
+            android:text="\n Restaurant: "
+            android:layout_gravity="center"
+            android:id="@+id/choose"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:textSize="22dp"
+            />
+
+            <Spinner
+                android:id="@+id/cat_spinner"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/choose"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:layout_toEndOf="@+id/choose"
+                android:layout_toRightOf="@+id/choose"
+                android:minHeight="30dp"
+                android:spinnerMode="dropdown"
+                android:textSize="22dp" />
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_below="@id/cat_spinner"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_below="@id/cat_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/menu_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/productImage"
+
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:foregroundGravity="center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/productImage"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textColor="#000"
+            android:textSize="15sp"
+            tools:text="Name" />
+
+
+
+        <TextView
+            android:id="@+id/idd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:text="ID: "
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/description"
+            />
+        <TextView
+            android:id="@+id/sonid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"
+            tools:text="id"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textColor="#000"
+            android:layout_below="@+id/description"
+            android:layout_toRightOf="@+id/idd"
+            android:layout_toEndOf="@+id/idd"
+             />
+
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:id="@+id/priceLinearLayout"
+            android:layout_below="@+id/idd"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="PRICE (DH)"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_marginLeft="5dp"
+                    android:hint="PRICE"
+                    android:textSize="22sp"
+                    style="@style/FormTextStyle"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price" />
+            </TableRow>
+
+        </TableLayout>
+        <LinearLayout
+            android:id="@+id/quantityLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/priceLinearLayout"
+            android:paddingBottom="16dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="16dp"
+             >
+
+            <TextView
+                android:id="@+id/quantityLabel"
+                android:layout_width="110dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="QUANTITY" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/decrement_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:onClick="decrement"
+                    android:textSize="18sp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/quantity_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/increment_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@null"
+                    android:onClick="increment"
+                    android:textSize="22sp"
+                    android:text="+" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantityTotal"
+            android:paddingTop="16dp"
+            android:layout_below="@+id/quantityLinearLayout"
+            android:paddingBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/total"
+                style="@style/FormTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="Total (DH)"
+
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/cost_text_view"
+                style="@style/FormTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_button"
+            android:background="@drawable/buttonselectorstyle"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/quantityTotal"
+            android:layout_marginBottom="10dp"
+            android:onClick="addToCart"
+            android:text="Add to cart" />
+
+    </RelativeLayout>
+
+</ScrollView>

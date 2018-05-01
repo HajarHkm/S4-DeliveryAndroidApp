@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hajar.foodapp.fragment3Home">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+
+        android:text="Delivery men:"
+        android:layout_gravity="center"
+        android:id="@+id/textmsg"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_weight="1"
+        android:textSize="22dp"/>
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textmsg"
+        android:layout_marginTop="5dp">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/livreurs_recyclerView"
+
+            android:scrollbars="vertical">
+        </android.support.v7.widget.RecyclerView>
+    </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

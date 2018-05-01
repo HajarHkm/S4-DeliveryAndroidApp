@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="121dp"
+    android:layout_marginTop="10dp"
+    >
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="3dp"
+        android:background="#fff"
+        card_view:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/imagecom"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/deliv"
+                android:gravity="center"
+
+                />
+
+
+            <TextView
+                android:id="@+id/idcommande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="idcommande"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/imagecom"
+                android:layout_toRightOf="@+id/imagecom"/>
+            <CheckBox
+                android:id="@+id/checkbox_meat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/idclientcom"
+                android:layout_marginEnd="29dp"
+                android:layout_marginRight="29dp"
+                android:onClick="onCheckboxClicked" />
+
+            <TextView
+                android:id="@+id/idView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idcommande"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imagecom"
+                android:layout_toRightOf="@+id/imagecom"
+                android:text="Id Client: "
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/idclientcom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:text="id"
+                android:layout_below="@+id/idcommande"
+                android:layout_toEndOf="@+id/idView"
+                android:layout_toRightOf="@+id/idView"/>
+
+            <TextView
+                android:id="@+id/adressecom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:text="Adresse"
+                android:layout_below="@+id/idView"
+                android:layout_toEndOf="@+id/imagecom"
+                android:layout_toRightOf="@+id/imagecom"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

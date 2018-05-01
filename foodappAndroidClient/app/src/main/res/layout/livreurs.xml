@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginTop="10dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/imagelivreur"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/nomlivreur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:text="nomLivreur"
+                android:layout_toEndOf="@+id/imagelivreur"
+                android:layout_toRightOf="@+id/imagelivreur"/>
+            <TextView
+                android:id="@+id/emaillivreuro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:text="nomLivreur"
+                android:layout_toEndOf="@+id/imagelivreur"
+                android:layout_toRightOf="@+id/imagelivreur"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/tellivreuro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:text="nomLivreurbbb"
+                android:visibility="gone"
+                android:layout_toEndOf="@+id/imagelivreur"
+                android:layout_toRightOf="@+id/imagelivreur"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

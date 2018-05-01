@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.hajar.foodapp.Register">
+
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginRight="10dp"
+       >
+
+    <TextView
+
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:text="Get Started!!"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold|italic"
+
+        android:textSize="30dp"
+        />
+
+
+    <EditText
+        android:id="@+id/loginclient"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Username"
+        android:maxLines="1"
+        android:singleLine="true"
+
+        />
+
+
+    <EditText
+
+        android:id="@+id/prenomclient"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Firstname"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+
+
+    <EditText
+
+        android:id="@+id/nomclient"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Lastname"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Address"
+        android:id="@+id/adresseclient"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Phone Number"
+        android:id="@+id/telclient"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:hint="Email Address"
+        android:id="@+id/emailclient"
+        />
+
+
+
+    <EditText
+
+        android:inputType="textPassword"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Password"
+        android:id="@+id/mdpclient"
+        android:maxLines="1"
+        android:singleLine="true"
+        />
+
+
+    <EditText
+
+        android:inputType="textPassword"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:hint="Confirm Password"
+        android:id="@+id/mdpconfirm"
+        android:maxLines="1"
+        android:singleLine="true"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp">
+            <TextView
+                android:id="@+id/type_textview"
+                android:paddingRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Type"
+                android:textColor="#000"
+                android:gravity="center"
+                android:fontFeatureSettings="sq"
+                android:textSize="20dp"
+                android:fontFamily="pass"/>
+            <RadioGroup
+                android:id="@+id/type_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@+id/type_textview"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/male_radio_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SimpleUser"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:id="@+id/female_radio_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Delivery"
+                    />
+            </RadioGroup>
+        </RelativeLayout>
+
+    <Button
+        android:id="@+id/butsignup"
+        android:background="@drawable/buttonselectorstyle"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        style="?android:textAppearanceSmall"
+        android:textColor="#fff"
+        android:text="REGISTER"
+        android:textStyle="bold"
+        android:onClick="Register"
+        />
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

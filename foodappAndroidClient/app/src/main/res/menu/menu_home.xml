@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hajar.foodapp.Home">
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/badge_circle"
+        android:orderInCategory="100"
+        android:title="Cart"
+        app:showAsAction="ifRoom" />
+</menu>

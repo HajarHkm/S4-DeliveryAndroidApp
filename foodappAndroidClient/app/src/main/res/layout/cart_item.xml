@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            >
+    <ImageView
+        android:id="@+id/cartImage"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/productCartName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_toRightOf="@+id/cartImage"
+        android:layout_marginTop="20dip"
+        tools:text="Name: "
+        />
+    <TextView
+        android:id="@+id/prod_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:textAppearanceLarge"
+
+        android:textSize="16sp"
+        android:text="Product Id:"
+        android:layout_below="@+id/productCartName"
+        android:layout_toEndOf="@+id/cartImage"
+        android:layout_toRightOf="@+id/cartImage" />
+    <TextView
+        android:id="@+id/product_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:textAppearanceLarge"
+
+        android:textSize="16sp"
+        android:text="id"
+        android:layout_below="@+id/productCartName"
+        android:layout_toEndOf="@+id/prod_id"
+        android:layout_toRightOf="@+id/prod_id" />
+    <TextView
+        android:id="@+id/quant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:textAppearanceLarge"
+
+        android:textSize="16sp"
+        tools:text="Quantity"
+        android:layout_below="@+id/product_id"
+        android:layout_toEndOf="@+id/cartImage"
+        android:layout_toRightOf="@+id/cartImage" />
+
+
+    <TextView
+        android:id="@+id/Cartquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:textAppearanceLarge"
+
+        android:textSize="16sp"
+        tools:text="Quantity: "
+        android:layout_below="@+id/product_id"
+        android:layout_toEndOf="@+id/quant"
+        android:layout_toRightOf="@+id/quant" />
+    <TextView
+        android:id="@+id/pricee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:textAppearanceLarge"
+
+        android:textSize="16sp"
+        tools:text="Price: "
+        android:layout_below="@+id/Cartquantity"
+        android:layout_toEndOf="@+id/cartImage"
+        android:layout_toRightOf="@+id/cartImage" />
+    <TextView
+        android:id="@+id/Cartprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textSize="16sp"
+        tools:text="Price: "
+        android:layout_below="@+id/Cartquantity"
+        android:layout_toEndOf="@+id/pricee"
+        android:layout_toRightOf="@+id/pricee" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="18dp">
+
+
+    <EditText
+        android:id="@+id/prenom_livraison"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:hint= "First Name" />
+
+    <EditText
+        android:id="@+id/nom_livraison"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/prenom_livraison"
+        android:hint= "Last Name" />
+
+    <EditText
+        android:id="@+id/tel_livraison"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nom_livraison"
+        android:hint= "Phone Number" />
+
+    <EditText
+        android:id="@+id/adresse_livraison"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tel_livraison"
+        android:hint= "Shipping Address" />
+
+
+</RelativeLayout>

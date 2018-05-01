@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="121dp"
+    android:layout_marginTop="10dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="3dp"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/imagePlat"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:id="@+id/nomplat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:text="nomplat"
+                android:layout_toEndOf="@+id/imagePlat"
+                android:layout_toRightOf="@+id/imagePlat"/>
+
+            <TextView
+                android:id="@+id/idView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:text="Id: "
+                android:layout_below="@+id/nomplat"
+                android:layout_toEndOf="@+id/imagePlat"
+                android:layout_toRightOf="@+id/imagePlat"/>
+            <TextView
+                android:id="@+id/idplat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:text="id"
+                android:layout_below="@+id/nomplat"
+                android:layout_toEndOf="@+id/idView"
+                android:layout_toRightOf="@+id/idView"/>
+
+            <TextView
+                android:id="@+id/prixplat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:text="prix"
+                android:layout_below="@+id/idView"
+                android:layout_toEndOf="@+id/imagePlat"
+                android:layout_toRightOf="@+id/imagePlat"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
