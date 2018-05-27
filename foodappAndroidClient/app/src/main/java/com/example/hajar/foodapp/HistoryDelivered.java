@@ -30,7 +30,7 @@ public class HistoryDelivered extends Fragment {
     private ApiCommandInterface apiCommandInterface;
 
     public HistoryDelivered() {
-        // Required empty public constructor
+        //this edited
     }
 
     @Override
