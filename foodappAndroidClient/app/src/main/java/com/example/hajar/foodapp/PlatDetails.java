@@ -1,18 +1,20 @@
 package com.example.hajar.foodapp;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-import SQLiteDb.BackGroundTask;
-import entities.Plat;
+import SQLiteCartdb.BackGroundTask;
+import SQLiteCartdb.CartDb;
+import SQLiteCartdb.CartOperations;
 
 public class PlatDetails extends AppCompatActivity {
 
@@ -30,10 +32,16 @@ public class PlatDetails extends AppCompatActivity {
     private int mQuantity = 1;
     private int mTotalPrice;
 
+    private int mNotificationsCount = 0;
+    private SQLiteDatabase mDb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plat_details);
+
+        CartOperations dbHelper = new CartOperations(this);
+        mDb = dbHelper.getWritableDatabase();
 
         imageplat = (ImageView) findViewById(R.id.productImage);
 
@@ -80,6 +88,14 @@ public class PlatDetails extends AppCompatActivity {
         }
     }
 
+    private void updateNotificationsBadge(int count) {
+        mNotificationsCount = count;
+
+        // force the ActionBar to relayout its MenuItems.
+        // onCreateOptionsMenu(Menu) will be called again.
+        invalidateOptionsMenu();
+    }
+
     private void displayQuantity(int numberOfItems) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText(String.valueOf(numberOfItems));
@@ -102,5 +118,21 @@ public class PlatDetails extends AppCompatActivity {
         backGroundTask.execute("add_product",product_image,product_name,product_price,product_quantity,product_id);
         finish();
     }
+    class FetchCountTask extends AsyncTask<Void, Void, Integer> {
 
+        @Override
+        protected Integer doInBackground(Void... params) {
+            String countQuery = "SELECT  * FROM " + CartDb.TableInfo.table_name;
+            Cursor cursor = mDb.rawQuery(countQuery, null);
+            int count = cursor.getCount();
+            cursor.close();
+            return count;
+
+        }
+
+        @Override
+        public void onPostExecute(Integer count) {
+            updateNotificationsBadge(count);
+        }
+    }
 }

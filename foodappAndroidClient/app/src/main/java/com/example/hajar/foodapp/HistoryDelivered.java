@@ -1,6 +1,7 @@
 package com.example.hajar.foodapp;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,6 +21,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Context.MODE_PRIVATE;
+
 
 public class HistoryDelivered extends Fragment {
 
@@ -30,7 +33,7 @@ public class HistoryDelivered extends Fragment {
     private ApiCommandInterface apiCommandInterface;
 
     public HistoryDelivered() {
-        //this edited
+        // Required empty public constructor
     }
 
     @Override
@@ -60,7 +63,10 @@ public class HistoryDelivered extends Fragment {
         System.out.println("*******************fetching");
 
         apiCommandInterface= ApiRetrofit.getApiClient().create(ApiCommandInterface.class);
-        Call<List<Commande>> call  = apiCommandInterface.getLivreurCommands(3);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LivreurID", MODE_PRIVATE);
+        final int idlivr = sharedPreferences.getInt("idlivreur", 0);
+
+        Call<List<Commande>> call  = apiCommandInterface.getLivreurCommands(idlivr);
         call.enqueue(new Callback<List<Commande>>() {
             @Override
             public void onResponse(Call<List<Commande>> call, Response<List<Commande>> response) {
