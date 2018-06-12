@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+        <TextView
+            android:id="@+id/CommandeIdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_marginTop="20dip"
+            tools:text="Command ID: "
+
+            />
+        <TextView
+            android:id="@+id/CommandeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_marginTop="20dip"
+            tools:text="1 "
+            android:layout_toEndOf="@+id/CommandeIdView"
+            android:layout_toRightOf="@+id/CommandeIdView"
+            />
+
+
+        <TextView
+            android:id="@+id/StateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="16sp"
+            tools:text="State:  "
+            android:layout_below="@+id/CommandeId"/>
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="16sp"
+            tools:text="100 "
+            android:layout_below="@+id/CommandeId"
+            android:layout_toRightOf="@+id/StateView"
+            android:layout_toEndOf="@+id/StateView"/>
+
+
+
+</RelativeLayout>
